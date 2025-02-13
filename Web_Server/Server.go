@@ -6,9 +6,10 @@ import (
 )
 
 func LauncWebServer() {
+	port:=":80"
 	http.HandleFunc("/", getHandle)
-    fmt.Println("Сервер запущен на http://localhost:9089")
-	http.ListenAndServe(":80", nil)
+    fmt.Println("Сервер запущен на http://localhost",port)
+	http.ListenAndServe(port, nil)
 }
 
 func getHandle(w http.ResponseWriter, r *http.Request) {
