@@ -8,7 +8,7 @@ import (
 func LauncWebServer() {
 	http.HandleFunc("/", getHandle)
     fmt.Println("Сервер запущен на http://localhost:9089")
-	http.ListenAndServe(":9089", nil)
+	http.ListenAndServe(":80", nil)
 }
 
 func getHandle(w http.ResponseWriter, r *http.Request) {
